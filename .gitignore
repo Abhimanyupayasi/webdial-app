@@ -1,31 +1,21 @@
 # Node.js
 node_modules/
-npm-debug.log
-yarn-error.log
+
+# Environment Variables
+.env
 
 # Build directories
-dist/
 build/
+dist/
 
-# React
-
-
-
-
-
-
-# Misc
+# Miscellaneous
 .DS_Store
-.env
 .idea/
 .vscode/
 *.log
 
 # Coverage directory used by tools like istanbul
 coverage/
-
-# Dependency directories
-jspm_packages/
 
 # Optional npm cache directory
 .npm/
@@ -38,3 +28,17 @@ jspm_packages/
 
 # Mac system files
 Thumbs.db
+
+# Windows Installer files
+*.cab
+*.msi
+
+# Dependency directories (if using yarn)
+.yarn/
+.yarn-cache/
+
+# React Native (if applicable)
+react-native/
+
+# TypeScript build output (if using TypeScript)
+*.tsbuildinfo

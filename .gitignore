@@ -8,11 +8,11 @@ dist/
 build/
 
 # React
-*.jsx
-*.tsx
-*.js
-*.ts
-*.map
+
+
+
+
+
 
 # Misc
 .DS_Store

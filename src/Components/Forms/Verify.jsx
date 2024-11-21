@@ -32,7 +32,7 @@ const Verify = () => {
     if (userId && secret) {
       verifyMagicLink(userId, secret);
     } else {
-      setMessage('Link has sent! Please check your mail.');
+      setMessage('Link has sent! Please check your mail. if mail not received, please check spam folder.');
     }
   }, []);
 

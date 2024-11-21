@@ -30,10 +30,10 @@ const App = () => {
         <Route path="/verify" element={<Verify />} />
         <Route path="/login" element={<LoginPage />} />
         <Route path="/" element={<Home/>} />
-        <Route path="/services" element={<Redirect url={`https://www.webdial.in/services/`}/>} />
+        {/* <Route path="/services" element={<Redirect url={`https://www.webdial.in/services/`}/>} />
         <Route path="/team" element={<Redirect url={`https://www.webdial.in/our-team/`}/>} />
         <Route path="/contact" element={<Redirect url={`https://www.webdial.in/contact-us/`}/>} />
-        <Route path="/company" element={<Redirect url={`https://www.webdial.in/projects/`}/>} />
+        <Route path="/company" element={<Redirect url={`https://www.webdial.in/projects/`}/>} /> */}
         <Route path="/marketplace" element={<ServiceList/>}/>
         
         <Route path="/" element={<Home/>} />
@@ -56,7 +56,7 @@ const App = () => {
           <Route path="/admin/view-orders/:orderId" element={<ViewSingleOrder/>} />
        </Route>
 
-
+        <Route path="*" element={<Navigate to="/" />} />
 
       </Routes>
     </Router>

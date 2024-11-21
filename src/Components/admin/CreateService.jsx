@@ -1,8 +1,10 @@
 import React, { useState } from "react";
 import { Client, Databases } from "appwrite";
 import conf from "../../conf/conf";
+import { useNavigate } from "react-router-dom";
 
 const ServiceForm = () => {
+  const navigate = useNavigate();
   const client = new Client()
     .setEndpoint(conf.appwriteUrl) // Replace with your Appwrite endpoint
     .setProject(conf.appwriteProjectId); // Replace with your Appwrite project ID
@@ -101,7 +103,8 @@ const ServiceForm = () => {
 
       // Refresh page after 1 second
       setTimeout(() => {
-        window.location.reload(); // Refresh page
+        navigate("/dashboard");
+        
       }, 1000);
 
     } catch (error) {

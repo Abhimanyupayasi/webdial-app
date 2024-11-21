@@ -6,6 +6,10 @@ function AdminLayout() {
   const user = useSelector((state) => state.auth.user);
   const isAdmin = user?.labels ? user.labels[0] : null;
 
+  if (!user) {
+    return <Navigate to="/login" replace />;
+  }
+
   // Check if user exists and has the 'admin' label
   if(!isAdmin || isAdmin !== "admin") {
     return <Navigate to="/dashboard" replace />;

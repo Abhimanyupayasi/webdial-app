@@ -18,6 +18,7 @@ import OrderSuccess from "./Components/products/OrderSuccess";
 import ViewOrders from "./Components/admin/ViewOrders";
 import ViewSingleOrder from "./Components/admin/ViewSingleOrder";
 import AdminNotification from "./Components/admin/AdminNotification";
+import Footer from "./Components/Footer";
 // import ViewSingleOrder from "./Components/admin/ViewSingleOrder";
 
 const App = () => {
@@ -59,6 +60,7 @@ const App = () => {
         <Route path="*" element={<Navigate to="/" />} />
 
       </Routes>
+      <Footer/>
     </Router>
   );
 };

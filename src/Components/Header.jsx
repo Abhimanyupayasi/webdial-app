@@ -162,7 +162,7 @@ const Header = () => {
       </nav>
     </header>
 
-    <div className='h-16'></div>
+    <div className='h-14'></div>
     </>
 
   );

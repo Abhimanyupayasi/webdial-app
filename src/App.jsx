@@ -19,6 +19,10 @@ import ViewOrders from "./Components/admin/ViewOrders";
 import ViewSingleOrder from "./Components/admin/ViewSingleOrder";
 import AdminNotification from "./Components/admin/AdminNotification";
 import Footer from "./Components/Footer";
+import FetchUserOrders from "./Components/users/FetchUserOrders";
+import UserNotification from "./Components/users/UserNotification";
+import UserProfile from "./Components/users/UserProfile";
+import EditProfile from "./Components/users/EditProfile";
 // import ViewSingleOrder from "./Components/admin/ViewSingleOrder";
 
 const App = () => {
@@ -42,6 +46,10 @@ const App = () => {
         {/* Protected Routes */}
         <Route element={<AuthLayout />}>
           <Route path="/dashboard" element={<Dashboard />} />
+          <Route path="/orders" element={<FetchUserOrders/>} />
+          <Route path="/notifications" element={<UserNotification/>} />
+          <Route path="/profile" element={<UserProfile/>} />
+          <Route path="/edit-profile" element={<EditProfile/>} />
           <Route path="/order/:productId" element={<OrderPage />} />
           <Route path="/order-success/:productId" element={<OrderSuccess />} />
         </Route>

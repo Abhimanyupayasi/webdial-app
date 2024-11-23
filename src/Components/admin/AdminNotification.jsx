@@ -48,7 +48,7 @@ const AdminNotification = () => {
   }
 
   return (
-    <div className="p-6 bg-gray-800 min-h-screen text-white">
+    <div className="p-6 border-b-2 border-white bg-gray-800 min-h-screen text-white">
       <h2 className="text-2xl font-semibold mb-4">Admin Notifications</h2>
       <div className="flex flex-col gap-4">
         {notifications.length > 0 ? (

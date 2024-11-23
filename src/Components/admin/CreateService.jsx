@@ -116,7 +116,7 @@ const ServiceForm = () => {
   };
 
   return (
-    <div>
+    <div className="mt-10 mb-10">
       {/* Toast Notification */}
       {toastMessage && (
         <div className="toast  z-50 toast-top toast-center">

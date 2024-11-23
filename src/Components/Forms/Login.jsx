@@ -85,7 +85,7 @@ const LoginPage = () => {
   };
 
   return (
-    <div className="login-container bg-gray-50 p-8 max-w-md mx-auto rounded-lg shadow-xl mt-10">
+    <div className="login-container my-20 bg-gray-50 p-8 max-w-md mx-auto rounded-lg shadow-xl mt-10">
   <h2 className="text-3xl font-semibold text-gray-800 mb-6 text-center">
     {loggedInUser ? `Logged in as ${loggedInUser.name}` : 'Login'}
   </h2>

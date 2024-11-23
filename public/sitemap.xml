@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+            http://www.w3.org/2001/XMLSchema-instance">
+
+  <!-- Home Page -->
+  <url>
+    <loc>https://web.webdial.in/</loc>
+    <lastmod>2024-11-23T19:06:05+00:00</lastmod>
+  </url>
+
+  <!-- Login Page -->
+  <url>
+    <loc>https://web.webdial.in/login</loc>
+    <lastmod>2024-11-23T19:06:05+00:00</lastmod>
+  </url>
+
+  <!-- Register Page -->
+  <url>
+    <loc>https://web.webdial.in/register</loc>
+    <lastmod>2024-11-23T19:06:05+00:00</lastmod>
+  </url>
+
+  <!-- Marketplace Page -->
+  <url>
+    <loc>https://web.webdial.in/marketplace</loc>
+    <lastmod>2024-11-23T19:06:05+00:00</lastmod>
+  </url>
+
+</urlset>

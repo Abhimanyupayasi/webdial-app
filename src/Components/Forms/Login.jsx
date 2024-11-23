@@ -97,7 +97,7 @@ const LoginPage = () => {
           name="keywords"
           content="Webdial, login, web development, SEO, video editing, graphic designing, app development"
         />
-        <meta name="robots" content="noindex, follow" />
+        <meta name="robots" content="index, follow" />
         <meta name="author" content="Webdial" />
         <meta name="copyright" content="Webdial" />
 

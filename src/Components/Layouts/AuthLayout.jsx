@@ -8,7 +8,7 @@ function AuthLayout() {
     const emailVerified = useSelector((state) => state.auth.emailVerified);
     const token = useSelector((state) => state.auth.token);
     const navigate = useNavigate();
-    console.log(user);
+   // console.log(user);
     
 
     useEffect(() => {

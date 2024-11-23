@@ -21,7 +21,7 @@ const ViewSingleOrder = () => {
   useEffect(() => {
     const fetchDetails = async () => {
       try {
-        console.log("Fetching Order ID:", orderId);
+        //console.log("Fetching Order ID:", orderId);
 
         // Fetch order details
         const orderResponse = await databases.getDocument(
@@ -30,7 +30,7 @@ const ViewSingleOrder = () => {
           orderId
         );
 
-        console.log("Order Response:", orderResponse);
+        //console.log("Order Response:", orderResponse);
         setOrder(orderResponse);
 
         // Fetch product details using productId
@@ -40,10 +40,10 @@ const ViewSingleOrder = () => {
           orderResponse.productId
         );
 
-        console.log("Product Response:", productResponse);
+       // console.log("Product Response:", productResponse);
         setProduct(productResponse);
       } catch (err) {
-        console.error("Error fetching data:", err);
+       // console.error("Error fetching data:", err);
         setError("Could not load order or product details. Please try again later.");
       } finally {
         setLoading(false);

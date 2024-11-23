@@ -42,13 +42,13 @@ const LoginPage = () => {
       const user = await account.get();
 
       // Log session token and user info for debugging
-      console.log('Session Token:', session.token);
-      console.log('User Data:', user);
+     // console.log('Session Token:', session.token);
+      //console.log('User Data:', user);
 
       //token craetion through aoppwrite
 
       const appwritToken = await account.createJWT('email', 'password');
-      console.log('Appwrite Token:', appwritToken);
+      //console.log('Appwrite Token:', appwritToken);
      
       dispatch(setToken(appwritToken.jwt));
       dispatch(setUser(user));
@@ -65,7 +65,7 @@ const LoginPage = () => {
       // Step 5: Navigate to dashboard after successful login
       navigate('/dashboard');
     } catch (err) {
-      console.error('Login failed:', err.message);
+     // console.error('Login failed:', err.message);
       setError('Login failed. Please check your credentials and try again.');
     }
   };

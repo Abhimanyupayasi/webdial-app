@@ -39,10 +39,10 @@ const Dashboard = () => {
       // Fetch the current user to verify the token
       const user = await account.get();
   
-      console.log('User Verified:', user);
+     // console.log('User Verified:', user);
       return true; // Token is valid
     } catch (error) {
-      console.error('Failed to verify token:', error);
+     // console.error('Failed to verify token:', error);
       return false; // Token is invalid or expired
     }
   };
@@ -51,7 +51,7 @@ const Dashboard = () => {
 
 
   const token = useSelector((state) => state.auth.token);
-  console.log(verifyToken(token)); // Verify the token on component mount
+  //console.log(verifyToken(token)); // Verify the token on component mount
    if(verifyToken(token) === false){ 
     const navigate = useNavigate();
     // navigate('/login');
@@ -66,8 +66,8 @@ const Dashboard = () => {
   const user = useSelector((state) => state.auth.user);
   const emailVerified = useSelector((state) => state.auth.emailVerified);
 
-  console.log('User:', user);
-  console.log('Email Verified:', emailVerified);
+  //console.log('User:', user);
+  //console.log('Email Verified:', emailVerified);
  
   
   const tokenform = localStorage.getItem('token') || useSelector((state) => state.auth.token);

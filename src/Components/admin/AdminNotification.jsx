@@ -25,7 +25,7 @@ const AdminNotification = () => {
         setNotifications(response.documents);
         setLoading(false);
       } catch (err) {
-        console.error('Error fetching notifications:', err);
+        //console.error('Error fetching notifications:', err);
         setError('Failed to fetch notifications.');
         setLoading(false);
       }

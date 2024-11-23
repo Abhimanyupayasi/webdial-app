@@ -108,7 +108,7 @@ const ServiceForm = () => {
       }, 1000);
 
     } catch (error) {
-      console.error("Error uploading service:", error);
+      //console.error("Error uploading service:", error);
       setToastMessage("Failed to upload service. Please try again.");
     } finally {
       setUploading(false);

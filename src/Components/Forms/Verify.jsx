@@ -44,7 +44,7 @@ const Verify = () => {
 
       // Fetch user details immediately after successful verification
       const user = await account.get();
-      console.log('User details:', user);
+      //console.log('User details:', user);
 
       // Dispatch user data and email verification status to Redux store
       dispatch(setUser(user));
@@ -57,7 +57,7 @@ const Verify = () => {
       // Redirect to dashboard immediately after setting the user
       navigate('/dashboard');
     } catch (error) {
-      console.error('Verification failed:', error);
+      //console.error('Verification failed:', error);
       setMessage(`Verification failed: ${error.message}`);
       fallbackToLocalStorage(); // Fallback to localStorage if session creation fails
     }

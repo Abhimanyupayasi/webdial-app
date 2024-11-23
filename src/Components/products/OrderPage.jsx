@@ -42,7 +42,7 @@ const OrderPage = () => {
         const user = await account.get();
         setUserId(user.$id);
       } catch (err) {
-        console.error("Error fetching user details:", err);
+        //console.error("Error fetching user details:", err);
         setError("Failed to fetch user details. Please log in.");
       }
     };

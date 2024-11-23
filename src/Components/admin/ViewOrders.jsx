@@ -25,7 +25,7 @@ const ViewOrders = () => {
         );
         setOrders(response.documents);
       } catch (err) {
-        console.error("Error fetching orders:", err);
+        //console.error("Error fetching orders:", err);
         setError("Failed to fetch orders. Please try again.");
       } finally {
         setLoading(false);

@@ -1,7 +1,10 @@
 import React, { useEffect, useState } from "react";
 import { Client, Databases } from "appwrite";
 import conf from "../../conf/conf";
-import { useNavigate } from "react-router-dom"; // Import useNavigate instead of useHistory
+import { useNavigate } from "react-router-dom";
+import { Helmet } from "react-helmet";
+
+// Import useNavigate instead of useHistory
 
 const ServiceList = ({ style }) => {
   const client = new Client()
@@ -48,6 +51,39 @@ const ServiceList = ({ style }) => {
 
   return (
     <div className={`${style} pb-10 w-full`}>
+      <Helmet>
+        <title>Marketplace - Webdial</title>
+        <meta
+          name="description"
+          content="Explore our marketplace offering services like web development, SEO, video editing, graphic design, app development, and more at Webdial."
+        />
+        <meta
+          name="keywords"
+          content="Webdial, marketplace, web development, SEO, video editing, logo designing, app development, graphic design, live video services"
+        />
+        <meta name="robots" content="index, follow" />
+        <meta name="author" content="Webdial" />
+        <meta name="copyright" content="Webdial" />
+
+        {/* Open Graph Meta Tags for Social Media Sharing */}
+        <meta property="og:type" content="website" />
+        <meta property="og:title" content="Webdial Marketplace" />
+        <meta
+          property="og:description"
+          content="Explore our marketplace offering services like web development, SEO, video editing, graphic design, app development, and more at Webdial."
+        />
+        <meta property="og:image" content="https://www.webdial.in/favicon/apple-touch-icon.png" />
+        <meta property="og:url" content="https://web.webdial.in/marketplace" />
+
+        {/* Twitter Card Meta Tags */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Webdial Marketplace" />
+        <meta
+          name="twitter:description"
+          content="Explore our marketplace offering services like web development, SEO, video editing, graphic design, app development, and more at Webdial."
+        />
+        <meta name="twitter:image" content="https://www.webdial.in/favicon/apple-touch-icon.png" />
+      </Helmet>
       <div className="w-full max-w-4xl py-5 mx-auto">
         <h1 className="mb-7 text-3xl  text-center font-extrabold text-gray-900 dark:text-white md:text-5xl lg:text-4xl">
           <span className="text-transparent bg-clip-text bg-gradient-to-r to-emerald-600 from-sky-400">

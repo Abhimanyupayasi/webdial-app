@@ -1,9 +1,43 @@
 import React from "react";
 import ServiceList from "../Components/admin/FetchServices";
+import { Helmet } from "react-helmet";
 
 const Home = () => {
   return (
     <div>
+       <Helmet>
+        <title>Home - Webdial</title>
+        <meta
+          name="description"
+          content="Welcome to Webdial! Explore our top services in web development, SEO, video editing, graphic designing, app development, and more."
+        />
+        <meta
+          name="keywords"
+          content="Webdial, home, web development, SEO, video editing, graphic designing, app development, logo designing, live video services"
+        />
+        <meta name="robots" content="index, follow" />
+        <meta name="author" content="Webdial" />
+        <meta name="copyright" content="Webdial" />
+
+        {/* Open Graph Meta Tags for Social Media Sharing */}
+        <meta property="og:type" content="website" />
+        <meta property="og:title" content="Webdial - Home" />
+        <meta
+          property="og:description"
+          content="Welcome to Webdial! Explore our top services in web development, SEO, video editing, graphic designing, app development, and more."
+        />
+        <meta property="og:image" content="https://www.webdial.in/favicon/apple-touch-icon.png" />
+        <meta property="og:url" content="https://web.webdial.in/" />
+
+        {/* Twitter Card Meta Tags */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Webdial - Home" />
+        <meta
+          name="twitter:description"
+          content="Welcome to Webdial! Explore our top services in web development, SEO, video editing, graphic designing, app development, and more."
+        />
+        <meta name="twitter:image" content="https://www.webdial.in/favicon/apple-touch-icon.png" />
+      </Helmet>
       {/* Hero Section */}
       <div className="bg-white dark:bg-gray-800 flex relative z-20 items-center overflow-hidden">
         <div className="container mx-auto px-6 flex flex-col sm:flex-row relative py-16">

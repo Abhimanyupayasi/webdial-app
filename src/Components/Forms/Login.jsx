@@ -5,6 +5,7 @@ import conf from '../../conf/conf';
 // Assuming appwriteUrl and appwriteProjectId are in conf
 import { useDispatch, useSelector } from 'react-redux';
 import { setEmailVerified, setToken, setUser } from '../../store/authSlice';
+import { Helmet } from 'react-helmet';
 
 
 
@@ -86,6 +87,39 @@ const LoginPage = () => {
 
   return (
     <div className="login-container my-20 bg-gray-50 p-8 max-w-md mx-auto rounded-lg shadow-xl mt-10">
+       <Helmet>
+        <title>Login - Webdial</title>
+        <meta
+          name="description"
+          content="Login to your Webdial account to access web development, SEO, video editing, graphic designing services, and more."
+        />
+        <meta
+          name="keywords"
+          content="Webdial, login, web development, SEO, video editing, graphic designing, app development"
+        />
+        <meta name="robots" content="noindex, follow" />
+        <meta name="author" content="Webdial" />
+        <meta name="copyright" content="Webdial" />
+
+        {/* Open Graph Meta Tags for Social Media Sharing */}
+        <meta property="og:type" content="website" />
+        <meta property="og:title" content="Webdial - Login" />
+        <meta
+          property="og:description"
+          content="Login to your Webdial account to access web development, SEO, video editing, graphic designing services, and more."
+        />
+        <meta property="og:image" content="https://www.webdial.in/favicon/apple-touch-icon.png" />
+        <meta property="og:url" content="https://web.webdial.in/login" />
+
+        {/* Twitter Card Meta Tags */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Webdial - Login" />
+        <meta
+          name="twitter:description"
+          content="Login to your Webdial account to access web development, SEO, video editing, graphic designing services, and more."
+        />
+        <meta name="twitter:image" content="https://www.webdial.in/favicon/apple-touch-icon.png" />
+      </Helmet>
   <h2 className="text-3xl font-semibold text-gray-800 mb-6 text-center">
     {loggedInUser ? `Logged in as ${loggedInUser.name}` : 'Login'}
   </h2>

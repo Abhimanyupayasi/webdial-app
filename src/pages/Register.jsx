@@ -103,6 +103,8 @@ import { useDispatch } from "react-redux";
 import { setEmailVerified } from "../store/authSlice";
 import conf from "../conf/conf";
 import Button from "../Components/Button";
+import { Helmet } from "react-helmet";
+
 
 const client = new Client()
   .setEndpoint(conf.appwriteUrl) // Your Appwrite endpoint
@@ -145,22 +147,41 @@ const Registration = () => {
 
   return (
     <div className="flex items-center justify-center min-h-screen bg-gradient-to-r from-indigo-100 via-indigo-200 to-indigo-300">
-      {/* <Button
-  text="Logout"
-  type="btn-Warning"
-  onClick={async () => {
-    try {
-      await account.deleteSession('current'); // Deletes the current session
-      setLoggedInUser(null); // Clears logged-in user state
-      dispatch(logout()); // Dispatches the logout action
-      setError(''); // Clears any error messages
-    } catch (err) {
-      console.error('Logout failed', err); // Logs the error if logout fails
-    }
-  }}
->
-  Logout
-</Button> */}
+      
+      <Helmet>
+        <title>Register - Webdial</title>
+        <meta
+          name="description"
+          content="Create an account with Webdial and access our wide range of services including web development, SEO, graphic designing, and more."
+        />
+        <meta
+          name="keywords"
+          content="register, create account, Webdial, web development, SEO, graphic designing, video editing"
+        />
+        <meta name="robots" content="index, follow" />
+        <meta name="author" content="Webdial" />
+        <meta name="copyright" content="Webdial" />
+
+       
+        <meta property="og:type" content="website" />
+        <meta property="og:title" content="Register - Webdial" />
+        <meta
+          property="og:description"
+          content="Create an account with Webdial and access our wide range of services including web development, SEO, graphic designing, and more."
+        />
+        <meta property="og:image" content="https://www.webdial.in/favicon/apple-touch-icon.png" />
+        <meta property="og:url" content="https://web.webdial.in/register" />
+
+        <meta name="twitter:site" content="@webdial" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Register - Webdial" />
+        <meta
+          name="twitter:description"
+          content="Create an account with Webdial and access our wide range of services including web development, SEO, graphic designing, and more."
+        />
+        <meta name="twitter:image" content="https://www.webdial.in/favicon/apple-touch-icon.png" />
+      </Helmet>
+      
       <div className="card w-full max-w-md bg-white shadow-2xl rounded-lg p-8">
         <h2 className="text-center text-3xl font-semibold text-indigo-700 mb-6">Create Account</h2>
         <form onSubmit={handleSubmit}>

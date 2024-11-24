@@ -51,83 +51,90 @@ const ServiceList = ({ style }) => {
 
   return (
     <div className={`${style} pb-10 w-full`}>
-      <Helmet>
-        <title>Marketplace - Webdial</title>
-        <meta
-          name="description"
-          content="Explore our marketplace offering services like web development, SEO, video editing, graphic design, app development, and more at Webdial."
-        />
-        <meta
-          name="keywords"
-          content="Webdial, marketplace, web development, SEO, video editing, logo designing, app development, graphic design, live video services"
-        />
-        <meta name="robots" content="index, follow" />
-        <meta name="author" content="Webdial" />
-        <meta name="copyright" content="Webdial" />
+  <Helmet>
+    <title>Marketplace - Webdial</title>
+    <meta
+      name="description"
+      content="Explore our marketplace offering services like web development, SEO, video editing, graphic design, app development, and more at Webdial."
+    />
+    <meta
+      name="keywords"
+      content="Webdial, marketplace, web development, SEO, video editing, logo designing, app development, graphic design, live video services"
+    />
+    <meta name="robots" content="index, follow" />
+    <meta name="author" content="Webdial" />
+    <meta name="copyright" content="Webdial" />
 
-        {/* Open Graph Meta Tags for Social Media Sharing */}
-        <meta property="og:type" content="website" />
-        <meta property="og:title" content="Webdial Marketplace" />
-        <meta
-          property="og:description"
-          content="Explore our marketplace offering services like web development, SEO, video editing, graphic design, app development, and more at Webdial."
-        />
-        <meta property="og:image" content="https://www.webdial.in/favicon/apple-touch-icon.png" />
-        <meta property="og:url" content="https://web.webdial.in/marketplace" />
+    {/* Open Graph Meta Tags for Social Media Sharing */}
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Webdial Marketplace" />
+    <meta
+      property="og:description"
+      content="Explore our marketplace offering services like web development, SEO, video editing, graphic design, app development, and more at Webdial."
+    />
+    <meta
+      property="og:image"
+      content="https://www.webdial.in/favicon/apple-touch-icon.png"
+    />
+    <meta property="og:url" content="https://web.webdial.in/marketplace" />
 
-        {/* Twitter Card Meta Tags */}
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Webdial Marketplace" />
-        <meta
-          name="twitter:description"
-          content="Explore our marketplace offering services like web development, SEO, video editing, graphic design, app development, and more at Webdial."
-        />
-        <meta name="twitter:image" content="https://www.webdial.in/favicon/apple-touch-icon.png" />
-      </Helmet>
-      <div className="w-full max-w-4xl py-5 mx-auto">
-        <h1 className="mb-7 text-3xl  text-center font-extrabold text-gray-900 dark:text-white md:text-5xl lg:text-4xl">
-          <span className="text-transparent bg-clip-text bg-gradient-to-r to-emerald-600 from-sky-400">
-            MARKET
-          </span>
-          PLACE
-        </h1>
-  
-        <div className="px-4 sm:px-6 md:px-8 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-          {services.map((service) => (
-            <div
-              key={service.$id}
-              className="bg-gray-800 text-white  p-4 rounded-lg shadow-lg hover:shadow-xl transition duration-300 ease-in-out"
-            >
-              <img
-                src={service.img} // Cloudinary image URL
-                alt={service.name}
-                className="w-full object-cover rounded mb-4"
-              />
-              <h3 className="text-lg underline underline-offset-4 pb-3 font-bold">
-                {service.name}
-              </h3>
-              <p className="text-sm">{service.description}</p>
-              <p className="text-sm mt-2">
-                <span className="line-through text-red-500">
-                  ₹{service.actual_price}
-                </span>{" "}
-                <span className="text-green-400 text-lg font-bold">
-                  ₹{service.price}
-                </span>
-              </p>
-  
-              {/* Get Now Button */}
-              <button
-                onClick={() => handleGetNowClick(service.$id)}
-                className="mt-4 px-6 py-2 rounded-full bg-blue-600 text-white font-semibold hover:bg-blue-700 transition duration-300 ease-in-out"
-              >
-                Get Now
-              </button>
-            </div>
-          ))}
+    {/* Twitter Card Meta Tags */}
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Webdial Marketplace" />
+    <meta
+      name="twitter:description"
+      content="Explore our marketplace offering services like web development, SEO, video editing, graphic design, app development, and more at Webdial."
+    />
+    <meta
+      name="twitter:image"
+      content="https://www.webdial.in/favicon/apple-touch-icon.png"
+    />
+  </Helmet>
+  <div className="w-full max-w-4xl py-5 mx-auto">
+    <h1 className="mb-7 text-3xl text-center font-extrabold text-gray-900 dark:text-white md:text-5xl lg:text-4xl">
+      <span className="text-transparent bg-clip-text bg-gradient-to-r to-emerald-600 from-sky-400">
+        MARKET
+      </span>
+      PLACE
+    </h1>
+
+    <div className="px-4 sm:px-6 md:px-8 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+      {services.map((service) => (
+        <div
+          key={service.$id}
+          className="bg-gray-800 text-white p-4 rounded-lg shadow-lg hover:shadow-xl transition duration-300 ease-in-out relative flex flex-col"
+        >
+          <img
+            src={service.img} // Cloudinary image URL
+            alt={service.name}
+            className="w-full object-cover rounded mb-4"
+          />
+          <h3 className="text-lg underline underline-offset-4 pb-3 font-bold">
+            {service.name}
+          </h3>
+          <p className="text-sm flex-grow">{service.description}</p>
+          <p className="text-sm mt-2">
+            <span className="line-through text-red-500">
+              ₹{service.actual_price}
+            </span>{" "}
+            <span className="text-green-400 text-lg font-bold">
+              ₹{service.price}
+            </span>
+          </p>
+
+          {/* Get Now Button */}
+          <button
+            onClick={() => handleGetNowClick(service.$id)}
+            className="mt-4 px-6 py-2 rounded-full bg-blue-600 text-white font-semibold hover:bg-blue-700 transition duration-300 ease-in-out"
+          >
+            Get Now
+          </button>
         </div>
-      </div>
+      ))}
     </div>
+  </div>
+</div>
+
   );
   
 };

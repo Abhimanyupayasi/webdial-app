@@ -4,6 +4,7 @@ import conf from "../../conf/conf";
 import { useNavigate } from "react-router-dom";
 import { Helmet } from "react-helmet";
 import { FaPhoneAlt, FaWhatsapp } from "react-icons/fa";
+import FloatingIcons from "../WhatsappCallIcon";
 
 // Import useNavigate instead of useHistory
 
@@ -98,25 +99,7 @@ const ServiceList = ({ style }) => {
       </span>
       PLACE
     </h1>
-    <div className="fixed top-20 right-0 z-50 flex flex-col items-center space-y-3 p-3">
-      {/* WhatsApp Icon */}
-      <a
-        href="https://wa.me/7049548385"
-        target="_blank"
-        rel="noopener noreferrer"
-        className="bg-green-500 text-white p-3 rounded-full hover:bg-green-600 transition duration-300 ease-in-out"
-      >
-        <FaWhatsapp className="text-2xl" />
-      </a>
-
-      {/* Call Icon */}
-      <a
-        href="tel:+918965099437"
-        className="bg-blue-500 text-white p-3 rounded-full hover:bg-blue-600 transition duration-300 ease-in-out"
-      >
-        <FaPhoneAlt className="text-2xl" />
-      </a>
-    </div>
+    <FloatingIcons/>
 
 
 

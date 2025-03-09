@@ -3,6 +3,7 @@ import { Client, Databases } from "appwrite";
 import conf from "../../conf/conf";
 import { useNavigate } from "react-router-dom";
 import { Helmet } from "react-helmet";
+import { FaPhoneAlt, FaWhatsapp } from "react-icons/fa";
 
 // Import useNavigate instead of useHistory
 
@@ -97,40 +98,62 @@ const ServiceList = ({ style }) => {
       </span>
       PLACE
     </h1>
+    <div className="fixed top-20 right-0 z-50 flex flex-col items-center space-y-3 p-3">
+      {/* WhatsApp Icon */}
+      <a
+        href="https://wa.me/7049548385"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="bg-green-500 text-white p-3 rounded-full hover:bg-green-600 transition duration-300 ease-in-out"
+      >
+        <FaWhatsapp className="text-2xl" />
+      </a>
+
+      {/* Call Icon */}
+      <a
+        href="tel:+918965099437"
+        className="bg-blue-500 text-white p-3 rounded-full hover:bg-blue-600 transition duration-300 ease-in-out"
+      >
+        <FaPhoneAlt className="text-2xl" />
+      </a>
+    </div>
+
+
 
     <div className="px-4 sm:px-6 md:px-8 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-      {services.map((service) => (
-        <div
-          key={service.$id}
-          className="bg-gray-800 text-white p-4 rounded-lg shadow-lg hover:shadow-xl transition duration-300 ease-in-out relative flex flex-col"
-        >
-          <img
-            src={service.img} // Cloudinary image URL
-            alt={service.name}
-            className="w-full object-cover rounded mb-4"
-          />
-          <h3 className="text-lg underline underline-offset-4 pb-3 font-bold">
-            {service.name}
-          </h3>
-          <p className="text-sm flex-grow">{service.description}</p>
-          <p className="text-sm mt-2">
-            <span className="line-through text-red-500">
-              ₹{service.actual_price}
-            </span>{" "}
-            <span className="text-green-400 text-lg font-bold">
-              ₹{service.price}
-            </span>
-          </p>
+    {[...services.slice(-1), ...services.slice(0, -1)].map((service) => (
+  <div
+    key={service.$id}
+    className="bg-gray-800 text-white p-4 rounded-lg shadow-lg hover:shadow-xl transition duration-300 ease-in-out relative flex flex-col"
+  >
+    <img
+      src={service.img} // Cloudinary image URL
+      alt={service.name}
+      className="w-full object-cover rounded mb-4"
+    />
+    <h3 className="text-lg underline underline-offset-4 pb-3 font-bold">
+      {service.name}
+    </h3>
+    <p className="text-sm flex-grow">{service.description}</p>
+    <p className="text-sm mt-2">
+      <span className="line-through text-red-500">
+        ₹{service.actual_price}
+      </span>{" "}
+      <span className="text-green-400 text-lg font-bold">
+        ₹{service.price}
+      </span>
+    </p>
 
-          {/* Get Now Button */}
-          <button
-            onClick={() => handleGetNowClick(service.$id)}
-            className="mt-4 px-6 py-2 rounded-full bg-blue-600 text-white font-semibold hover:bg-blue-700 transition duration-300 ease-in-out"
-          >
-            Get Now
-          </button>
-        </div>
-      ))}
+    {/* Get Now Button */}
+    <button
+      onClick={() => handleGetNowClick(service.$id)}
+      className="mt-4 px-6 py-2 rounded-full bg-blue-600 text-white font-semibold hover:bg-blue-700 transition duration-300 ease-in-out"
+    >
+      Get Now
+    </button>
+  </div>
+))}
+
     </div>
   </div>
 </div>

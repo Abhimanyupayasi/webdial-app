@@ -23,6 +23,7 @@ import FetchUserOrders from "./Components/users/FetchUserOrders";
 import UserNotification from "./Components/users/UserNotification";
 import UserProfile from "./Components/users/UserProfile";
 import EditProfile from "./Components/users/EditProfile";
+import FreelancingRequest from "./freelancing/FreelancingRequest";
 // import ViewSingleOrder from "./Components/admin/ViewSingleOrder";
 
 const App = () => {
@@ -35,11 +36,12 @@ const App = () => {
         <Route path="/verify" element={<Verify />} />
         <Route path="/login" element={<LoginPage />} />
         <Route path="/" element={<Home/>} />
-        {/* <Route path="/services" element={<Redirect url={`https://www.webdial.in/services/`}/>} />
-        <Route path="/team" element={<Redirect url={`https://www.webdial.in/our-team/`}/>} />
+         <Route path="/services" element={<FreelancingRequest/>} />
+        {/*<Route path="/team" element={<Redirect url={`https://www.webdial.in/our-team/`}/>} />
         <Route path="/contact" element={<Redirect url={`https://www.webdial.in/contact-us/`}/>} />
         <Route path="/company" element={<Redirect url={`https://www.webdial.in/projects/`}/>} /> */}
         <Route path="/marketplace" element={<ServiceList/>}/>
+        <Route path="/freelancing" element={<FreelancingRequest/>}/>
         
         <Route path="/" element={<Home/>} />
 
